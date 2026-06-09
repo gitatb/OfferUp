@@ -1,8 +1,22 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OfferUp MVP
+
+This is a Minimum Viable Product (MVP) for "OfferUp," a local daily deals and experiences marketplace similar to Groupon. The application features three distinct portals catering to different user roles:
+
+- **Consumer Storefront:** Allows users to browse active deals, view deal details, simulate a checkout process, and manage purchased vouchers.
+- **Merchant Portal:** Provides merchants with a dashboard to track key metrics (sales, active deals, pending redemptions), a tool to create new deals (which enter a pending state), and a tool to redeem consumer vouchers.
+- **Admin Dashboard:** Enables platform administrators to moderate deals (approve or reject pending deals) and view a global ledger that calculates platform commissions and merchant payouts.
+
+The application is built using Next.js (App Router), React, TypeScript, and Tailwind CSS. It currently relies on a robust mock data system (`src/lib/mock-data.ts`) to simulate a backend database (PostgreSQL/Supabase).
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -16,21 +30,19 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment Options
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+You can deploy this Next.js application using various hosting providers. Some examples include:
 
-## Learn More
+### Vercel
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new) from the creators of Next.js.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-To learn more about Next.js, take a look at the following resources:
+### AWS Amplify
+AWS Amplify provides full-stack hosting for Next.js applications, supporting SSR and API routes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Netlify
+Netlify is another excellent option for hosting Next.js applications, offering seamless GitHub integration and CI/CD.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Custom Server / Docker
+You can build the application using `npm run build` and start it with `npm run start` to deploy it on your own VPS or a containerized environment using Docker.
