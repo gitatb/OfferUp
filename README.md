@@ -46,3 +46,9 @@ Netlify is another excellent option for hosting Next.js applications, offering s
 
 ### Custom Server / Docker
 You can build the application using `npm run build` and start it with `npm run start` to deploy it on your own VPS or a containerized environment using Docker.
+
+### Google Cloud (Cloud Run)
+You can containerize the Next.js application using Docker and deploy it seamlessly to Google Cloud Run for a fully managed, scalable serverless environment.
+
+### Azure (Static Web Apps / App Service)
+Azure offers multiple deployment options. You can deploy the Next.js app to Azure Static Web Apps (which supports hybrid Next.js features) or package it as a Docker container to run on Azure App Service.
